@@ -1,0 +1,43 @@
+server:
+ port: 10800
+spring:
+ #自启动
+ devtools:
+  restart:
+   enabled:true
+ application:
+  name:wisdom
+#数据库配置
+ datasource:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/poic?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=true
+  username: root
+  password: mycp1122
+  type: com.alibaba.druid.pool.DruidDataSource
+  #连接池配置
+  #初始化连接数
+  initialSize: 5
+  #最小连接池数量
+  minIdle: 5
+  #最大连接池数量
+  maxActive: 20
+  #获取连接时最大等待时间，单位毫秒。配置了maxWait之后，缺省启用公平锁，并发效率会有所下#降，
+  #如果需要可以通过配置useUnfairLock属性为true使用非公平锁。
+  maxWait: 60000
+  timeBetweenEvictionRunsMillis: 60000
+  minEvictableIdleTimeMillis: 300000
+  validationQuery: SELECT 1 FROM DUAL
+  testWhileIdle: true
+  testOnBorrow: false
+  testOnReturn: false
+  druid:
+   exceptionSorter: true
+   filters: stat,wall
+  maxPoolPreparedStatementPerConnectionSize: 20
+  #慢sql
+  connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+  useGlobalDataSourceStat: true
+#mybatis
+mybatis:
+ config-location: classpath:config/mybatis-config.xml
+ mapper-locations: classpath:config/mapper/*.xml
