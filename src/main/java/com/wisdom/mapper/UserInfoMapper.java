@@ -11,7 +11,4 @@ public interface UserInfoMapper {
 	
 	public List<Map<String,Object>> getUserList();
 	
-	public int saveCityInfo(Map<String,Object> city);
-	
-	public void batchSaveCityInfo(List cityList);
 }

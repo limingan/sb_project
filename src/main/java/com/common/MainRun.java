@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @SpringBootApplication(scanBasePackages="com")
-@MapperScan("com.wisdom.mapper")
+@MapperScan("com.*.mapper")
 @ServletComponentScan(basePackages="com.wisdom.db")
 public class MainRun {
 

@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.wisdom.service.CommonSevice;
+import com.wisdom.mapper.CommonMapper;
 import com.wisdom.mapper.UserInfoMapper;
 
 import net.sf.json.JSONArray;
@@ -24,9 +25,10 @@ public class CommonServiceImpl implements CommonSevice {
 
 	@Autowired
 	private JdbcTemplate template;
-	
 	@Autowired
 	private UserInfoMapper userInfoMapper;
+	@Autowired
+	private CommonMapper commonMapper;
 	
 	@Override
 	public Map getUserInfo(String name) {
@@ -61,7 +63,7 @@ public class CommonServiceImpl implements CommonSevice {
 					param.put("province", province);
 					param.put("city", cityName);
 					param.put("area", area);
-					userInfoMapper.saveCityInfo(param);
+					commonMapper.saveCityInfo(param);
 					param.clear();
 				}
 			}
@@ -90,13 +92,13 @@ public class CommonServiceImpl implements CommonSevice {
 				}
 			}
 		}
-		userInfoMapper.batchSaveCityInfo(list);
-		return 1;
+		commonMapper.batchSaveCityInfo(list);
+		return list.size();
 	}
 	@Override
-	public void afterPropertiesSet() throws Exception {
-		
+	public List<Map<String, Object>> getCityListByCityName(String cityName) {
+		List<Map<String,Object>> result = commonMapper.getCityListByCityName(cityName);
+		return result;
 	}
-	
 
 }

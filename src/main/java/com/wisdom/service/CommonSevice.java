@@ -7,7 +7,7 @@ import org.springframework.beans.factory.InitializingBean;
 
 import com.wisdom.model.UserInfo;
 
-public interface CommonSevice extends InitializingBean{
+public interface CommonSevice{
 	
 	public Map getUserInfo(String name);
 	
@@ -18,4 +18,6 @@ public interface CommonSevice extends InitializingBean{
 	public int saveCityInfo(String cityJsonArray);
 	
 	public int batchSaveCityInfo(String cityJsonArray);
+	
+	public List<Map<String,Object>> getCityListByCityName(String cityName);
 }

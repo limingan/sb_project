@@ -10,10 +10,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.common.controller.BaseController;
 import com.wisdom.service.impl.CommonServiceImpl;
 
 @RestController
-public class CommonController {
+public class CommonController extends BaseController {
 	
 	@Autowired
 	private CommonServiceImpl commonService;
@@ -27,24 +29,24 @@ public class CommonController {
 	@RequestMapping("/api/getUserInfo.do")
     public String getUserInfo(@RequestParam String name) {
 		Map userinfo = commonService.getUserInfoByName(name);
-        return (String) userinfo.get("name");
+        return super.responseSuccess(userinfo);
     }
 	
 	@RequestMapping("/api/getUserList.do")
-    public List getUserList() {
+    public String getUserList() {
 		List userinfos = commonService.getUserList();
-        return  userinfos;
-    }
-	
-	@RequestMapping("/api/insertCityInfo.do")
-    public String getUserList(String cityInfo) {
-		commonService.saveCityInfo(cityInfo);
-        return  cityInfo;
+        return  super.responseSuccess(userinfos);
     }
 	
 	@RequestMapping("/api/batchSaveCityInfo.do")
     public String batchSaveCityInfo(String cityInfo) {
 		commonService.batchSaveCityInfo(cityInfo);
-        return  cityInfo;
+        return  super.responseSuccess("");
+    }
+	
+	@RequestMapping("/common/city/getCityListByCityName.do")
+    public String getCityListByCityName(String cityName) {
+		List<Map<String,Object>> result = commonService.getCityListByCityName(cityName);
+        return  super.responseSuccess(result);
     }
 }
