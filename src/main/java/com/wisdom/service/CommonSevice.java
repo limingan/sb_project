@@ -9,12 +9,6 @@ import com.wisdom.model.UserInfo;
 
 public interface CommonSevice{
 	
-	public Map getUserInfo(String name);
-	
-	public Map getUserInfoByName(String name);
-	
-	public List<Map<String,Object>> getUserList();
-	
 	public int saveCityInfo(String cityJsonArray);
 	
 	public int batchSaveCityInfo(String cityJsonArray);

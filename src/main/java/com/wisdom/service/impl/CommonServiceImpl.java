@@ -24,28 +24,7 @@ import net.sf.json.JSONObject;
 public class CommonServiceImpl implements CommonSevice {
 
 	@Autowired
-	private JdbcTemplate template;
-	@Autowired
-	private UserInfoMapper userInfoMapper;
-	@Autowired
 	private CommonMapper commonMapper;
-	
-	@Override
-	public Map getUserInfo(String name) {
-		String sql = "select * from userinfo where name=?";
-		Map<String,Object> userinfo = template.queryForMap(sql, name);
-		return userinfo;
-	}
-	@Override
-	public Map getUserInfoByName(String name) {
-		Map userInfo = userInfoMapper.getUserInfoByName(name);
-		return userInfo;
-	}
-	
-	public List<Map<String,Object>> getUserList(){
-		List<Map<String, Object>> list = userInfoMapper.getUserList();
-		return list;
-	}
 	
 	public int saveCityInfo(String cityJsonArray){
 		JSONArray array = JSONArray.fromObject(cityJsonArray);

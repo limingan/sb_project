@@ -1,0 +1,126 @@
+[lf-1][wisdom][2018-12-22 16:50:57.378][INFO ][restartedMain][StartupInfoLogger.java:48] - Starting MainRun on PC-20150206VRCI with PID 7696 (E:\workspace1\wisdom\target\classes started by Administrator in E:\workspace1\wisdom)
+[lf-1][wisdom][2018-12-22 16:50:57.379][INFO ][restartedMain][SpringApplication.java:597] - The following profiles are active: wisdom
+[lf-1][wisdom][2018-12-22 16:50:57.383][INFO ][restartedMain][AbstractApplicationContext.java:583] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@12a2476: startup date [Sat Dec 22 16:50:57 CST 2018]; root of context hierarchy
+[lf-1][wisdom][2018-12-22 16:50:58.528][INFO ][restartedMain][PostProcessorRegistrationDelegate.java:327] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cf6937d2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[lf-1][wisdom][2018-12-22 16:50:58.604][INFO ][restartedMain][TomcatEmbeddedServletContainer.java:92] - Tomcat initialized with port(s): 10800 (http)
+[lf-1][wisdom][2018-12-22 16:50:58.606][INFO ][restartedMain][DirectJDKLog.java:180] - Starting service [Tomcat]
+[lf-1][wisdom][2018-12-22 16:50:58.607][INFO ][restartedMain][DirectJDKLog.java:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+[lf-1][wisdom][2018-12-22 16:50:58.624][INFO ][localhost-startStop-1][DirectJDKLog.java:180] - Initializing Spring embedded WebApplicationContext
+[lf-1][wisdom][2018-12-22 16:50:58.625][INFO ][localhost-startStop-1][EmbeddedWebApplicationContext.java:276] - Root WebApplicationContext: initialization completed in 1242 ms
+[lf-1][wisdom][2018-12-22 16:50:58.675][INFO ][localhost-startStop-1][ServletRegistrationBean.java:191] - Mapping servlet: 'dispatcherServlet' to [/]
+[lf-1][wisdom][2018-12-22 16:50:58.676][INFO ][localhost-startStop-1][ServletRegistrationBean.java:191] - Mapping servlet: 'com.wisdom.db.DruidStatFilter' to [/druid/*]
+[lf-1][wisdom][2018-12-22 16:50:58.676][INFO ][localhost-startStop-1][AbstractFilterRegistrationBean.java:259] - Mapping filter: 'characterEncodingFilter' to: [/*]
+[lf-1][wisdom][2018-12-22 16:50:58.676][INFO ][localhost-startStop-1][AbstractFilterRegistrationBean.java:259] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[lf-1][wisdom][2018-12-22 16:50:58.676][INFO ][localhost-startStop-1][AbstractFilterRegistrationBean.java:259] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[lf-1][wisdom][2018-12-22 16:50:58.676][INFO ][localhost-startStop-1][AbstractFilterRegistrationBean.java:259] - Mapping filter: 'requestContextFilter' to: [/*]
+[lf-1][wisdom][2018-12-22 16:50:59.091][INFO ][restartedMain][RequestMappingHandlerAdapter.java:556] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@12a2476: startup date [Sat Dec 22 16:50:57 CST 2018]; root of context hierarchy
+[lf-1][wisdom][2018-12-22 16:50:59.096][INFO ][restartedMain][RequestMappingHandlerAdapter.java:588] - Detected ResponseBodyAdvice bean in JSONPResponseBodyAdvice
+[lf-1][wisdom][2018-12-22 16:50:59.097][INFO ][restartedMain][RequestMappingHandlerAdapter.java:588] - Detected ResponseBodyAdvice bean in fastJsonpResponseBodyAdvice
+[lf-1][wisdom][2018-12-22 16:50:59.097][INFO ][restartedMain][RequestMappingHandlerAdapter.java:588] - Detected ResponseBodyAdvice bean in fastJsonViewResponseBodyAdvice
+[lf-1][wisdom][2018-12-22 16:50:59.102][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/api/{method}]}" onto public java.lang.String com.wisdom.controller.CommonController.serviceByMethodId(java.lang.String,javax.servlet.http.HttpServletRequest)
+[lf-1][wisdom][2018-12-22 16:50:59.103][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/api/batchSaveCityInfo.do]}" onto public java.lang.String com.wisdom.controller.CommonController.batchSaveCityInfo(java.lang.String)
+[lf-1][wisdom][2018-12-22 16:50:59.103][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/common/city/getCityListByCityName.do]}" onto public java.lang.String com.wisdom.controller.CommonController.getCityListByCityName(java.lang.String)
+[lf-1][wisdom][2018-12-22 16:50:59.104][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/wisdom/login.do]}" onto public java.lang.String com.wisdom.controller.LoginController.login(javax.servlet.http.HttpServletRequest)
+[lf-1][wisdom][2018-12-22 16:50:59.107][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[lf-1][wisdom][2018-12-22 16:50:59.107][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[lf-1][wisdom][2018-12-22 16:50:59.116][INFO ][restartedMain][AbstractUrlHandlerMapping.java:362] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[lf-1][wisdom][2018-12-22 16:50:59.116][INFO ][restartedMain][AbstractUrlHandlerMapping.java:362] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[lf-1][wisdom][2018-12-22 16:50:59.125][INFO ][restartedMain][ExceptionHandlerExceptionResolver.java:280] - Detected ResponseBodyAdvice implementation in JSONPResponseBodyAdvice
+[lf-1][wisdom][2018-12-22 16:50:59.126][INFO ][restartedMain][ExceptionHandlerExceptionResolver.java:280] - Detected ResponseBodyAdvice implementation in fastJsonpResponseBodyAdvice
+[lf-1][wisdom][2018-12-22 16:50:59.126][INFO ][restartedMain][ExceptionHandlerExceptionResolver.java:280] - Detected ResponseBodyAdvice implementation in fastJsonViewResponseBodyAdvice
+[lf-1][wisdom][2018-12-22 16:50:59.131][INFO ][restartedMain][AbstractUrlHandlerMapping.java:362] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[lf-1][wisdom][2018-12-22 16:50:59.170][INFO ][restartedMain][OptionalLiveReloadServer.java:58] - LiveReload server is running on port 35729
+[lf-1][wisdom][2018-12-22 16:50:59.222][INFO ][restartedMain][MBeanExporter.java:431] - Registering beans for JMX exposure on startup
+[lf-1][wisdom][2018-12-22 16:50:59.223][INFO ][restartedMain][MBeanExporter.java:918] - Bean with name 'dataSource' has been autodetected for JMX exposure
+[lf-1][wisdom][2018-12-22 16:50:59.226][INFO ][restartedMain][MBeanExporter.java:672] - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+[lf-1][wisdom][2018-12-22 16:50:59.236][INFO ][restartedMain][TomcatEmbeddedServletContainer.java:216] - Tomcat started on port(s): 10800 (http)
+[lf-1][wisdom][2018-12-22 16:50:59.238][INFO ][restartedMain][StartupInfoLogger.java:57] - Started MainRun in 2.023 seconds (JVM running for 2683.283)
+[lf-1][wisdom][2018-12-22 16:52:00.761][INFO ][http-nio-10800-exec-1][DirectJDKLog.java:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[lf-1][wisdom][2018-12-22 16:52:00.764][INFO ][http-nio-10800-exec-1][FrameworkServlet.java:489] - FrameworkServlet 'dispatcherServlet': initialization started
+[lf-1][wisdom][2018-12-22 16:52:00.768][INFO ][http-nio-10800-exec-1][FrameworkServlet.java:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 4 ms
+[lf-1][wisdom][2018-12-22 16:52:00.775][INFO ][http-nio-10800-exec-1][CommonInterceptor.java:31] - CommonInterceptor preHandler begin>>>>>>
+[lf-1][wisdom][2018-12-22 16:52:00.776][INFO ][http-nio-10800-exec-1][LoginInterceptor.java:18] - LoginInterceptor preHandler begin>>>>>>
+[lf-1][wisdom][2018-12-22 16:53:42.256][INFO ][Thread-82][AbstractApplicationContext.java:984] - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@12a2476: startup date [Sat Dec 22 16:50:57 CST 2018]; root of context hierarchy
+[lf-1][wisdom][2018-12-22 16:53:42.260][INFO ][Thread-82][MBeanExporter.java:449] - Unregistering JMX-exposed beans on shutdown
+[lf-1][wisdom][2018-12-22 16:53:42.262][INFO ][Thread-82][MBeanRegistrationSupport.java:243] - Unregistering JMX-exposed beans
+[wisdom][2018-12-22 16:53:42.620][INFO ][restartedMain][StartupInfoLogger.java:48] - Starting MainRun on PC-20150206VRCI with PID 7696 (E:\workspace1\wisdom\target\classes started by Administrator in E:\workspace1\wisdom)
+[wisdom][2018-12-22 16:53:42.622][INFO ][restartedMain][SpringApplication.java:597] - The following profiles are active: wisdom
+[wisdom][2018-12-22 16:53:42.626][INFO ][restartedMain][AbstractApplicationContext.java:583] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a747b7: startup date [Sat Dec 22 16:53:42 CST 2018]; root of context hierarchy
+[wisdom][2018-12-22 16:53:43.734][INFO ][restartedMain][PostProcessorRegistrationDelegate.java:327] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cf6937d2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[wisdom][2018-12-22 16:53:43.813][INFO ][restartedMain][TomcatEmbeddedServletContainer.java:92] - Tomcat initialized with port(s): 10800 (http)
+[wisdom][2018-12-22 16:53:43.815][INFO ][restartedMain][DirectJDKLog.java:180] - Starting service [Tomcat]
+[wisdom][2018-12-22 16:53:43.815][INFO ][restartedMain][DirectJDKLog.java:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+[wisdom][2018-12-22 16:53:43.833][INFO ][localhost-startStop-1][DirectJDKLog.java:180] - Initializing Spring embedded WebApplicationContext
+[wisdom][2018-12-22 16:53:43.834][INFO ][localhost-startStop-1][EmbeddedWebApplicationContext.java:276] - Root WebApplicationContext: initialization completed in 1208 ms
+[wisdom][2018-12-22 16:53:43.885][INFO ][localhost-startStop-1][ServletRegistrationBean.java:191] - Mapping servlet: 'dispatcherServlet' to [/]
+[wisdom][2018-12-22 16:53:43.885][INFO ][localhost-startStop-1][ServletRegistrationBean.java:191] - Mapping servlet: 'com.wisdom.db.DruidStatFilter' to [/druid/*]
+[wisdom][2018-12-22 16:53:43.886][INFO ][localhost-startStop-1][AbstractFilterRegistrationBean.java:259] - Mapping filter: 'characterEncodingFilter' to: [/*]
+[wisdom][2018-12-22 16:53:43.886][INFO ][localhost-startStop-1][AbstractFilterRegistrationBean.java:259] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[wisdom][2018-12-22 16:53:43.886][INFO ][localhost-startStop-1][AbstractFilterRegistrationBean.java:259] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[wisdom][2018-12-22 16:53:43.886][INFO ][localhost-startStop-1][AbstractFilterRegistrationBean.java:259] - Mapping filter: 'requestContextFilter' to: [/*]
+[wisdom][2018-12-22 16:53:44.310][INFO ][restartedMain][RequestMappingHandlerAdapter.java:556] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a747b7: startup date [Sat Dec 22 16:53:42 CST 2018]; root of context hierarchy
+[wisdom][2018-12-22 16:53:44.317][INFO ][restartedMain][RequestMappingHandlerAdapter.java:588] - Detected ResponseBodyAdvice bean in JSONPResponseBodyAdvice
+[wisdom][2018-12-22 16:53:44.317][INFO ][restartedMain][RequestMappingHandlerAdapter.java:588] - Detected ResponseBodyAdvice bean in fastJsonpResponseBodyAdvice
+[wisdom][2018-12-22 16:53:44.318][INFO ][restartedMain][RequestMappingHandlerAdapter.java:588] - Detected ResponseBodyAdvice bean in fastJsonViewResponseBodyAdvice
+[wisdom][2018-12-22 16:53:44.324][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/api/{method}]}" onto public java.lang.String com.wisdom.controller.CommonController.serviceByMethodId(java.lang.String,javax.servlet.http.HttpServletRequest)
+[wisdom][2018-12-22 16:53:44.325][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/api/batchSaveCityInfo.do]}" onto public java.lang.String com.wisdom.controller.CommonController.batchSaveCityInfo(java.lang.String)
+[wisdom][2018-12-22 16:53:44.325][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/common/city/getCityListByCityName.do]}" onto public java.lang.String com.wisdom.controller.CommonController.getCityListByCityName(java.lang.String)
+[wisdom][2018-12-22 16:53:44.326][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/wisdom/login.do]}" onto public java.lang.String com.wisdom.controller.LoginController.login(javax.servlet.http.HttpServletRequest)
+[wisdom][2018-12-22 16:53:44.328][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[wisdom][2018-12-22 16:53:44.329][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[wisdom][2018-12-22 16:53:44.337][INFO ][restartedMain][AbstractUrlHandlerMapping.java:362] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[wisdom][2018-12-22 16:53:44.337][INFO ][restartedMain][AbstractUrlHandlerMapping.java:362] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[wisdom][2018-12-22 16:53:44.345][INFO ][restartedMain][ExceptionHandlerExceptionResolver.java:280] - Detected ResponseBodyAdvice implementation in JSONPResponseBodyAdvice
+[wisdom][2018-12-22 16:53:44.346][INFO ][restartedMain][ExceptionHandlerExceptionResolver.java:280] - Detected ResponseBodyAdvice implementation in fastJsonpResponseBodyAdvice
+[wisdom][2018-12-22 16:53:44.347][INFO ][restartedMain][ExceptionHandlerExceptionResolver.java:280] - Detected ResponseBodyAdvice implementation in fastJsonViewResponseBodyAdvice
+[wisdom][2018-12-22 16:53:44.352][INFO ][restartedMain][AbstractUrlHandlerMapping.java:362] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[wisdom][2018-12-22 16:53:44.404][INFO ][restartedMain][OptionalLiveReloadServer.java:58] - LiveReload server is running on port 35729
+[wisdom][2018-12-22 16:53:44.454][INFO ][restartedMain][MBeanExporter.java:431] - Registering beans for JMX exposure on startup
+[wisdom][2018-12-22 16:53:44.454][INFO ][restartedMain][MBeanExporter.java:918] - Bean with name 'dataSource' has been autodetected for JMX exposure
+[wisdom][2018-12-22 16:53:44.459][INFO ][restartedMain][MBeanExporter.java:672] - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+[wisdom][2018-12-22 16:53:44.471][INFO ][restartedMain][TomcatEmbeddedServletContainer.java:216] - Tomcat started on port(s): 10800 (http)
+[wisdom][2018-12-22 16:53:44.473][INFO ][restartedMain][StartupInfoLogger.java:57] - Started MainRun in 1.939 seconds (JVM running for 2848.515)
+[wisdom][2018-12-22 16:54:24.984][INFO ][restartedMain][StartupInfoLogger.java:48] - Starting MainRun on PC-20150206VRCI with PID 1912 (E:\workspace1\wisdom\target\classes started by Administrator in E:\workspace1\wisdom)
+[wisdom][2018-12-22 16:54:24.988][INFO ][restartedMain][SpringApplication.java:597] - The following profiles are active: wisdom
+[wisdom][2018-12-22 16:54:25.059][INFO ][restartedMain][AbstractApplicationContext.java:583] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1330645: startup date [Sat Dec 22 16:54:25 CST 2018]; root of context hierarchy
+[wisdom][2018-12-22 16:54:25.396][INFO ][background-preinit][Version.java:30] - HV000001: Hibernate Validator 5.3.6.Final
+[wisdom][2018-12-22 16:54:27.149][INFO ][restartedMain][PostProcessorRegistrationDelegate.java:327] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$612d3d37] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[wisdom][2018-12-22 16:54:27.735][INFO ][restartedMain][TomcatEmbeddedServletContainer.java:92] - Tomcat initialized with port(s): 10800 (http)
+[wisdom][2018-12-22 16:54:27.752][INFO ][restartedMain][DirectJDKLog.java:180] - Initializing ProtocolHandler ["http-nio-10800"]
+[wisdom][2018-12-22 16:54:27.766][INFO ][restartedMain][DirectJDKLog.java:180] - Starting service [Tomcat]
+[wisdom][2018-12-22 16:54:27.767][INFO ][restartedMain][DirectJDKLog.java:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+[wisdom][2018-12-22 16:54:27.912][INFO ][localhost-startStop-1][DirectJDKLog.java:180] - Initializing Spring embedded WebApplicationContext
+[wisdom][2018-12-22 16:54:27.913][INFO ][localhost-startStop-1][EmbeddedWebApplicationContext.java:276] - Root WebApplicationContext: initialization completed in 2854 ms
+[wisdom][2018-12-22 16:54:28.100][INFO ][localhost-startStop-1][ServletRegistrationBean.java:191] - Mapping servlet: 'dispatcherServlet' to [/]
+[wisdom][2018-12-22 16:54:28.101][INFO ][localhost-startStop-1][ServletRegistrationBean.java:191] - Mapping servlet: 'com.wisdom.db.DruidStatFilter' to [/druid/*]
+[wisdom][2018-12-22 16:54:28.105][INFO ][localhost-startStop-1][AbstractFilterRegistrationBean.java:259] - Mapping filter: 'characterEncodingFilter' to: [/*]
+[wisdom][2018-12-22 16:54:28.106][INFO ][localhost-startStop-1][AbstractFilterRegistrationBean.java:259] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[wisdom][2018-12-22 16:54:28.106][INFO ][localhost-startStop-1][AbstractFilterRegistrationBean.java:259] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[wisdom][2018-12-22 16:54:28.107][INFO ][localhost-startStop-1][AbstractFilterRegistrationBean.java:259] - Mapping filter: 'requestContextFilter' to: [/*]
+[wisdom][2018-12-22 16:54:29.120][INFO ][restartedMain][RequestMappingHandlerAdapter.java:556] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1330645: startup date [Sat Dec 22 16:54:25 CST 2018]; root of context hierarchy
+[wisdom][2018-12-22 16:54:29.129][INFO ][restartedMain][RequestMappingHandlerAdapter.java:588] - Detected ResponseBodyAdvice bean in JSONPResponseBodyAdvice
+[wisdom][2018-12-22 16:54:29.129][INFO ][restartedMain][RequestMappingHandlerAdapter.java:588] - Detected ResponseBodyAdvice bean in fastJsonpResponseBodyAdvice
+[wisdom][2018-12-22 16:54:29.130][INFO ][restartedMain][RequestMappingHandlerAdapter.java:588] - Detected ResponseBodyAdvice bean in fastJsonViewResponseBodyAdvice
+[wisdom][2018-12-22 16:54:29.205][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/api/{method}]}" onto public java.lang.String com.wisdom.controller.CommonController.serviceByMethodId(java.lang.String,javax.servlet.http.HttpServletRequest)
+[wisdom][2018-12-22 16:54:29.206][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/api/batchSaveCityInfo.do]}" onto public java.lang.String com.wisdom.controller.CommonController.batchSaveCityInfo(java.lang.String)
+[wisdom][2018-12-22 16:54:29.207][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/common/city/getCityListByCityName.do]}" onto public java.lang.String com.wisdom.controller.CommonController.getCityListByCityName(java.lang.String)
+[wisdom][2018-12-22 16:54:29.207][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/wisdom/login.do]}" onto public java.lang.String com.wisdom.controller.LoginController.login(javax.servlet.http.HttpServletRequest)
+[wisdom][2018-12-22 16:54:29.210][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[wisdom][2018-12-22 16:54:29.211][INFO ][restartedMain][AbstractHandlerMethodMapping.java:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[wisdom][2018-12-22 16:54:29.242][INFO ][restartedMain][AbstractUrlHandlerMapping.java:362] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[wisdom][2018-12-22 16:54:29.242][INFO ][restartedMain][AbstractUrlHandlerMapping.java:362] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[wisdom][2018-12-22 16:54:29.259][INFO ][restartedMain][ExceptionHandlerExceptionResolver.java:280] - Detected ResponseBodyAdvice implementation in JSONPResponseBodyAdvice
+[wisdom][2018-12-22 16:54:29.260][INFO ][restartedMain][ExceptionHandlerExceptionResolver.java:280] - Detected ResponseBodyAdvice implementation in fastJsonpResponseBodyAdvice
+[wisdom][2018-12-22 16:54:29.260][INFO ][restartedMain][ExceptionHandlerExceptionResolver.java:280] - Detected ResponseBodyAdvice implementation in fastJsonViewResponseBodyAdvice
+[wisdom][2018-12-22 16:54:29.290][INFO ][restartedMain][AbstractUrlHandlerMapping.java:362] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[wisdom][2018-12-22 16:54:29.581][INFO ][restartedMain][OptionalLiveReloadServer.java:58] - LiveReload server is running on port 35729
+[wisdom][2018-12-22 16:54:29.641][INFO ][restartedMain][MBeanExporter.java:431] - Registering beans for JMX exposure on startup
+[wisdom][2018-12-22 16:54:29.643][INFO ][restartedMain][MBeanExporter.java:918] - Bean with name 'dataSource' has been autodetected for JMX exposure
+[wisdom][2018-12-22 16:54:29.650][INFO ][restartedMain][MBeanExporter.java:672] - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+[wisdom][2018-12-22 16:54:29.661][INFO ][restartedMain][DirectJDKLog.java:180] - Starting ProtocolHandler ["http-nio-10800"]
+[wisdom][2018-12-22 16:54:29.672][INFO ][restartedMain][DirectJDKLog.java:180] - Using a shared selector for servlet write/read
+[wisdom][2018-12-22 16:54:29.686][INFO ][restartedMain][TomcatEmbeddedServletContainer.java:216] - Tomcat started on port(s): 10800 (http)
+[wisdom][2018-12-22 16:54:29.691][INFO ][restartedMain][StartupInfoLogger.java:57] - Started MainRun in 5.29 seconds (JVM running for 5.744)
+[wisdom][2018-12-22 16:57:57.914][INFO ][Thread-6][AbstractApplicationContext.java:984] - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1330645: startup date [Sat Dec 22 16:54:25 CST 2018]; root of context hierarchy
+[wisdom][2018-12-22 16:57:57.920][INFO ][Thread-6][MBeanExporter.java:449] - Unregistering JMX-exposed beans on shutdown
+[wisdom][2018-12-22 16:57:57.921][INFO ][Thread-6][MBeanRegistrationSupport.java:243] - Unregistering JMX-exposed beans

@@ -7,8 +7,10 @@ import com.wisdom.model.UserInfo;
 
 public interface UserInfoMapper {
 	
-	public Map getUserInfoByName(String name);
+	public UserInfo getUserInfoByName(String name);
 	
 	public List<Map<String,Object>> getUserList();
+	
+	public int updateUserInfo(UserInfo userInfo);
 	
 }

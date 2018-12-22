@@ -26,18 +26,6 @@ public class CommonController extends BaseController {
 		return "hello api routes :" + url;
 	}
 	
-	@RequestMapping("/api/getUserInfo.do")
-    public String getUserInfo(@RequestParam String name) {
-		Map userinfo = commonService.getUserInfoByName(name);
-        return super.responseSuccess(userinfo);
-    }
-	
-	@RequestMapping("/api/getUserList.do")
-    public String getUserList() {
-		List userinfos = commonService.getUserList();
-        return  super.responseSuccess(userinfos);
-    }
-	
 	@RequestMapping("/api/batchSaveCityInfo.do")
     public String batchSaveCityInfo(String cityInfo) {
 		commonService.batchSaveCityInfo(cityInfo);

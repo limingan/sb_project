@@ -1,0 +1,3 @@
+#免登接口
+login:
+ excludes: /wisdom/login.do,/wisdom/regist.do

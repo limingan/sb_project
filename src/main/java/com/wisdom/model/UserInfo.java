@@ -2,26 +2,34 @@ package com.wisdom.model;
 
 
 public class UserInfo {
-	private String name;
-	private String id;
-	private int age;
-	public String getName() {
-		return name;
+	private String userName;
+	private String password;
+	private String accountId;
+	private String accountType;
+	public String getUserName() {
+		return userName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
-	public String getId() {
-		return id;
+	public String getPassword() {
+		return password;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-	public int getAge() {
-		return age;
+	public String getAccountId() {
+		return accountId;
 	}
-	public void setAge(int age) {
-		this.age = age;
+	public void setAccountId(String accountId) {
+		this.accountId = accountId;
 	}
+	public String getAccountType() {
+		return accountType;
+	}
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
+	}
+	
 	
 }

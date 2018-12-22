@@ -8,16 +8,25 @@
 	<select id="getUserList" parameterType="string" resultType="HashMap">
 	  	select * from userinfo;
 	</select>
-    <update id="update" parameterType="com.wisdom.model.UserInfo">
-        UPDATE userinfo SET name=#{name},age=#{age} WHERE id=#{id}
+    <update id="updateUserInfo" parameterType="com.wisdom.model.UserInfo">
+        update wis_userinfo set
+        password=#{password},
+        date_updated=now()
+        <!-- 
+        <isNotNull  prepend="," property="username"> 
+        	username=#{userName} 
+        </isNotNull>
+         -->
+        where account_id=#{accountId}
     </update>
 
     <delete id="delete" parameterType="string">
         DELETE FROM userinfo WHERE id=#{id}
     </delete>
 
-    <select id="getUserInfoByName" resultType="HashMap" parameterType="string">
-        select * from userinfo where name = #{name}
+    <select id="getUserInfoByName" resultType="com.wisdom.model.UserInfo" parameterType="string">
+        select username "userName",password,account_id "accountId",account_type "accountType" 
+        from wis_userinfo where username = #{userName}
     </select>
 
 </mapper>

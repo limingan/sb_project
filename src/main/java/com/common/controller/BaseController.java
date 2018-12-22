@@ -11,27 +11,46 @@ import com.common.util.ResultFlagConstants;
 
 public class BaseController {
 	
-	public String responseSuccess(Object data){
+	/**
+	 * 成功统一返回封装，codeAndMsg：String code, String msg
+	 * @param data
+	 * @param codeAndMsg
+	 * @return
+	 */
+	public String responseSuccess(Object data, String... codeAndMsg){
 		Map<String,Object> resMap = new HashMap<String,Object>();
-		resMap.put("msg", ResultFlagConstants.RESULT_SUCCESS.getMsg());
-		resMap.put("code", ResultFlagConstants.RESULT_SUCCESS.getCode());
+		String code,msg;
+		if(codeAndMsg.length > 0){
+			 code = codeAndMsg[0];
+			 msg = codeAndMsg[1];
+		}else{
+			msg = ResultFlagConstants.RESULT_SUCCESS.getMsg();
+			code = ResultFlagConstants.RESULT_SUCCESS.getCode();
+		}
+		resMap.put("msg", msg);
+		resMap.put("code", code);
 		resMap.put("data", data);
 		return JSONObject.toJSONString(resMap);
 	}
-	
-	public String responseFail(Map<String,String> msgMap){
+	/**
+	 * 失败统一返回封装，codeAndMsg：String code, String msg
+	 * @param data
+	 * @param codeAndMsg
+	 * @return
+	 */
+	public String responseFail(String... codeAndMsg){
 		Map<String,Object> resMap = new HashMap<String,Object>();
-		String msg = ResultFlagConstants.RESULT_ERROR.getMsg();
-		String code = ResultFlagConstants.RESULT_ERROR.getCode();
-		if(StringUtils.isNotBlank(msgMap.get("msg"))){
-			msg = msgMap.get("msg");
-		}
-		if(StringUtils.isNotBlank(msgMap.get("code"))){
-			code = msgMap.get("code");
+		String code,msg;
+		if(codeAndMsg.length > 0){
+			 code = codeAndMsg[0];
+			 msg = codeAndMsg[1];
+		}else{
+			msg = ResultFlagConstants.RESULT_SUCCESS.getMsg();
+			code = ResultFlagConstants.RESULT_SUCCESS.getCode();
 		}
 		resMap.put("msg", msg);
 		resMap.put("code", code);
 		resMap.put("data", "");
-		return JSON.toJSONString(resMap);
+		return JSONObject.toJSONString(resMap);
 	}
 }
