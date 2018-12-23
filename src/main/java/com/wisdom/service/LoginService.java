@@ -2,9 +2,11 @@ package com.wisdom.service;
 
 import java.util.Map;
 
+import com.wisdom.model.UserInfo;
+
 public interface LoginService {
 	
 	public Map<String,Object> login(String userName, String password);
 	
-	public Map<String,Object> getUserInfo(String accountId);
+	public UserInfo getUserInfoById(String accountId);
 }

@@ -7,6 +7,7 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.common.util.cache.UserInfoGuava;
 import com.wisdom.mapper.UserInfoMapper;
 import com.wisdom.model.UserInfo;
 import com.wisdom.service.LoginService;
@@ -16,6 +17,8 @@ public class LoginServiceImpl implements LoginService {
 
 	@Autowired
 	private UserInfoMapper userInfoMapper;
+	@Autowired
+	private UserInfoGuava userInfoGuava;
 	
 	@Override
 	public Map<String, Object> login(String userName, String password) {
@@ -30,8 +33,8 @@ public class LoginServiceImpl implements LoginService {
 			return loginResult;
 		}else{
 			if(password.equals(userInfo.getPassword())){
-				userInfo.setPassword("");
-				loginResult.put("data", userInfo);
+				loginResult.put("accountId", userInfo.getAccountId());
+				loginResult.put("userName", userInfo.getUserName());
 			}else{
 				loginResult.put("errorMsg", "账号或密码错误！");
 				return loginResult;
@@ -41,8 +44,10 @@ public class LoginServiceImpl implements LoginService {
 	}
 
 	@Override
-	public Map<String, Object> getUserInfo(String accountId) {
-		return null;
+	public UserInfo getUserInfoById(String accountId) {
+		UserInfo userInfo = userInfoGuava.getUserInfoByAccountId(accountId);
+//		UserInfo userInfo = userInfoMapper.getUserInfoById(accountId);
+		return userInfo;
 	}
 
 }

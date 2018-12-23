@@ -28,5 +28,9 @@
         select username "userName",password,account_id "accountId",account_type "accountType" 
         from wis_userinfo where username = #{userName}
     </select>
+    <select id="getUserInfoById" resultType="com.wisdom.model.UserInfo" parameterType="string">
+        select username "userName",password,account_id "accountId",account_type "accountType" 
+        from wis_userinfo where account_id = #{accountId}
+    </select>
 
 </mapper>

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.common.controller.BaseController;
 import com.common.util.ResultFlagConstants;
+import com.wisdom.model.UserInfo;
 import com.wisdom.service.impl.LoginServiceImpl;
 
 @RestController
@@ -28,6 +29,16 @@ public class LoginController extends BaseController {
 			return super.responseFail(ResultFlagConstants.RESULT_PARAM_IS_NULL.getCode(),ResultFlagConstants.RESULT_PARAM_IS_NULL.getMsg());
 		}
 		Map<String,Object> result = loginService.login(userName, password);
+        return  super.responseSuccess(result);
+    }
+	
+	@RequestMapping("/wisdom/getUserById.do")
+    public String getUserById(HttpServletRequest request) {
+		String accountId = request.getParameter("accountId");
+		if(StringUtils.isBlank(accountId)){
+			return super.responseFail(ResultFlagConstants.RESULT_PARAM_IS_NULL.getCode(),ResultFlagConstants.RESULT_PARAM_IS_NULL.getMsg());
+		}
+		UserInfo result = loginService.getUserInfoById(accountId);
         return  super.responseSuccess(result);
     }
 	
