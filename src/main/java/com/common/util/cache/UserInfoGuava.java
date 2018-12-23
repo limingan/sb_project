@@ -18,20 +18,20 @@ public class UserInfoGuava {
 	private UserInfo userInfo;
 	@Autowired
 	private UserInfoMapper mapper;
-	@Cacheable(value="userInfoGuavaCache", key="#accountId")
+	@Cacheable(value="userInfoGuavaCache", key="'userinfo'+#accountId")
 	public UserInfo getUserInfoByAccountId(String accountId){
 		logger.info("从缓存获取不到，改为查数据库");
 		userInfo = mapper.getUserInfoById(accountId);
 		logger.info("从缓存获取不到，查数据库成功"+userInfo);
 		return userInfo;
 	}
-	@CachePut(value="userInfoGuavaCache", key="#user.accountId")
+	@CachePut(value="userInfoGuavaCache", key="'userinfo'+#user.accountId")
 	public UserInfo putUserInfo(UserInfo user){
 		logger.info("查数据库，放入缓存");
 		mapper.updateUserInfo(user);
 		return user;
 	}
-	@CacheEvict(value="userInfoGuavaCache", key="#accountId")
+	@CacheEvict(value="userInfoGuavaCache", key="'userinfo'+#accountId")
 	public void remove(String accountId){
 		userInfo=null;
 		logger.info("从缓存删除");

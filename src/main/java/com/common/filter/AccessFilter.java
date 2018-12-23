@@ -15,7 +15,7 @@ import org.springframework.core.annotation.Order;
 @Order(1)   
 @WebFilter(urlPatterns="/*")
 public class AccessFilter implements Filter {
-
+  //或者自定义一个FilterRegistrationBean 的子类实现filter
 	@Override
 	public void destroy() {
 

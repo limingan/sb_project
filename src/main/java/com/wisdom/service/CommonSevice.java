@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.InitializingBean;
 
+import com.wisdom.model.CodeMap;
 import com.wisdom.model.UserInfo;
 
 public interface CommonSevice{
@@ -14,4 +15,6 @@ public interface CommonSevice{
 	public int batchSaveCityInfo(String cityJsonArray);
 	
 	public List<Map<String,Object>> getCityListByCityName(String cityName);
+	
+	public CodeMap getCodeMapById(String codeId);
 }

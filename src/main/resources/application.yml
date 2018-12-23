@@ -13,9 +13,10 @@ spring:
   name:wisdom
  cache:
   type: guava
+  #共用一个cache-name
   cache-name: userInfoGuavaCache
   #缓存最大数量1000条, 缓存失效时间 1个小时
-  guava.spec: maximumSize=2,expireAfterWrite=60m
+  guava.spec: maximumSize=1000,expireAfterWrite=60m
 #数据库配置
  datasource:
   driverClassName: com.mysql.jdbc.Driver

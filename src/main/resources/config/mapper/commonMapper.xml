@@ -5,24 +5,23 @@
 
 <mapper namespace="com.wisdom.mapper.CommonMapper">
 
-
     <select id="getCityListByCityName" resultType="HashMap" parameterType="String">
         select * from poic_citycode where city = #{cityName}
     </select>
     <select id="getSunCityListByCityName" resultType="HashMap" parameterType="String">
         select * from poic_citycode where city = #{cityName}
     </select>
-	
 	<insert id="saveCityInfo" parameterType="HashMap">
 		insert into poic_cityCode(province,city,area) values(#{province},#{city},#{area})
 	</insert>
-	
 	<insert id="batchSaveCityInfo" parameterType="list">
 		insert into poic_cityCode(province,city,area)  values
 		<foreach collection="list" item="cityItem" separator=",">
 		(#{cityItem.province},#{cityItem.city},#{cityItem.area})
 		</foreach>
-		
 	</insert>
-
+	<select id="getCodeMapById" parameterType="String" resultType="CodeMap">
+		select code_id "codeId",attribute1,attribute2,attribute3 
+		from wis_code_map where code_id=#{codeId}
+	</select>
 </mapper>
